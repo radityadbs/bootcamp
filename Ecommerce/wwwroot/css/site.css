@@ -1,0 +1,343 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+/* === Buttons & Forms === */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.btn {
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff !important;
+}
+
+/* === Card & Table Effects === */
+.card {
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  animation: fadeInUp 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f3f5;
+  transition: 0.2s;
+}
+
+/* === LOGIN PAGE === */
+body.login-page {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body.login-page .container {
+  margin: 0;
+  max-width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === DASHBOARD PAGE === */
+body.dashboard-page {
+  background-color: #f8f9fa;
+}
+
+/* 🌈 SIDEBAR */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #007bff, #00c6ff);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* 🌈 Saat collapsed */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Hilangkan teks saat collapsed */
+.sidebar.collapsed .brand-text,
+.sidebar.collapsed .nav-link span,
+.sidebar.collapsed .user-info span,
+.sidebar.collapsed .footer {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  transition: opacity 0.3s ease, visibility 0.2s ease;
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.brand i {
+  font-size: 1.5rem;
+}
+
+.sidebar .brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: #ffffff33;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #ffffff55;
+}
+
+/* === Navigasi === */
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.25rem 0;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ✅ Saat sidebar tertutup, icon di tengah */
+.sidebar.collapsed .nav-link {
+  justify-content: center;
+  padding: 0.7rem 0;
+  gap: 0;
+}
+
+.sidebar.collapsed .nav-link span {
+  display: none !important;
+}
+
+/* === FOOTER (Final Fix Version) === */
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  gap: 10px;
+  position: relative;
+}
+
+/* User info */
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Tombol Login/Logout */
+.sidebar-footer .btn {
+  width: 85%;
+  max-width: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #fff;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+  /* 🔹 tambah jarak aman */
+}
+
+.sidebar-footer .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Copyright Text */
+.sidebar-footer .footer {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+  bottom: 0;
+  margin-top: 5px;
+}
+
+/* ✅ Mode collapsed */
+.sidebar.collapsed .sidebar-footer {
+  padding: 12px 0;
+  gap: 6px;
+}
+
+.sidebar.collapsed .btn {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0;
+  /* ❗hapus jarak agar tetap tengah */
+}
+
+.sidebar.collapsed .btn span {
+  display: none;
+}
+
+.sidebar.collapsed .footer {
+  display: none;
+}
+
+.sidebar.collapsed .user-info {
+  flex-direction: column;
+  gap: 0;
+  font-size: 1.2rem;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+.sidebar.collapsed~.main-content {
+  margin-left: 80px;
+}
+
+/* === Toggle Button Floating === */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  left: 260px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar.collapsed+.toggle-btn {
+  left: 90px;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .sidebar {
+    left: -250px;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .toggle-btn {
+    left: 1rem;
+  }
+}

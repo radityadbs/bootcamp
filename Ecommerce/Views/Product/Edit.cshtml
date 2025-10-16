@@ -1,0 +1,111 @@
+@model Ecommerce.ViewModels.ProductFormVm
+@{
+  ViewData["BodyClass"] = "dashboard-page";
+}
+
+<div class="container py-4">
+  <div class="card shadow-lg border-0" style="border-radius: 12px;">
+    <div class="card-header header-gradient text-white d-flex justify-content-between align-items-center shadow-sm">
+      <h4 class="mb-0 fw-semibold">
+        <i class="bi bi-pencil-square me-2"></i> Edit Product
+      </h4>
+    </div>
+    <div class="card-body p-4">
+      <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="ProductId" />
+
+        <div class="mb-3">
+          <label asp-for="ProductName" class="form-label fw-semibold">Product Name</label>
+          <input asp-for="ProductName" class="form-control" />
+          <span asp-validation-for="ProductName" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+          <label asp-for="Price" class="form-label fw-semibold">Price</label>
+          <div class="input-group">
+            <span class="input-group-text">Rp</span>
+            <input asp-for="Price" id="priceInput" class="form-control text-end" placeholder="0" />
+          </div>
+          <span asp-validation-for="Price" class="text-danger small"></span>
+        </div>
+
+        <div class="mb-3">
+          <label asp-for="ProductTypeId" class="form-label fw-semibold">Product Type</label>
+          <select asp-for="ProductTypeId" class="form-select" asp-items="Model.ProductTypes">
+            <option value="">-- Select Product Type --</option>
+          </select>
+          <span asp-validation-for="ProductTypeId" class="text-danger small"></span>
+        </div>
+
+        <div class="d-flex justify-content-end mt-4">
+          <button type="submit" class="btn btn-gradient px-4 shadow-sm">
+            <i class="bi bi-save me-1"></i> Update
+          </button>
+          <a href="@Url.Action("Index")" class="btn btn-secondary ms-2 px-4">
+            Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+  <script>
+    const priceInput = document.getElementById('priceInput');
+
+    // Format angka ke format Rupiah
+    function formatRupiah(angka) {
+      return angka.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    // Event format otomatis saat mengetik
+    priceInput.addEventListener('input', (e) => {
+      const raw = e.target.value.replace(/\D/g, ''); // hapus semua non-digit
+      e.target.value = raw ? formatRupiah(raw) : '';
+    });
+
+    // Sebelum submit, ubah kembali ke angka murni
+    const form = priceInput.closest('form');
+    form.addEventListener('submit', () => {
+      priceInput.value = priceInput.value.replace(/\D/g, '');
+    });
+  </script>
+
+  <style>
+    /* 🌈 Header Gradient Style - konsisten dengan Add Product button */
+    .header-gradient {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: #fff !important;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-gradient h4 {
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .header-gradient i {
+      font-size: 1.2rem;
+    }
+
+    .header-gradient:hover {
+      filter: brightness(1.05);
+      transition: filter 0.2s ease-in-out;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, #007bff, #00c6ff);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(90deg, #0069d9, #00aaff);
+    }
+  </style>
+}

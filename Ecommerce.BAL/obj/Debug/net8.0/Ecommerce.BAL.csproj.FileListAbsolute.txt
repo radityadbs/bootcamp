@@ -1,0 +1,5 @@
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/Debug/net8.0/Ecommerce.BAL.csproj.AssemblyReference.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/Debug/net8.0/Ecommerce.BAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/Debug/net8.0/Ecommerce.BAL.AssemblyInfoInputs.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/Debug/net8.0/Ecommerce.BAL.AssemblyInfo.cs
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/Debug/net8.0/Ecommerce.BAL.csproj.CoreCompileInputs.cache

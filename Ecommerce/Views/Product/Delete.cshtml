@@ -1,0 +1,18 @@
+@model Ecommerce.Services.ProductResponse
+@{
+  ViewData["BodyClass"] = "dashboard-page";
+}
+<h3>Are You Sure Want to Delete This Product ?</h3>
+<div class="card p-3 mt-3 shadow-sm">
+  <h5>@Model.ProductName</h5>
+  <p>
+    <strong>Price:</strong> @Model.Price.ToString("N0") <br />
+    <strong>Product Type:</strong> @Model.ProductTypeName
+  </p>
+  <dd class="col-sm-9"><code>@Model.ProductId</code></dd>
+</div>
+
+<form asp-action="Delete" asp-route-id="@Model.ProductId" method="post" class="mt-3">
+  <button type="submit" class="btn btn-danger">Hapus</button>
+  <a asp-action="Index" class="btn btn-secondary">Batal</a>
+</form>

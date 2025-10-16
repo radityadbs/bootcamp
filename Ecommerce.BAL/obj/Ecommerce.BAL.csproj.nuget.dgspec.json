@@ -1,0 +1,216 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/Ecommerce.BAL.csproj": {}
+  },
+  "projects": {
+    "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/Ecommerce.BAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/Ecommerce.BAL.csproj",
+        "projectName": "Ecommerce.BAL",
+        "projectPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/Ecommerce.BAL.csproj",
+        "packagesPath": "/Users/radityadimas/.nuget/packages/",
+        "outputPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.BAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/radityadimas/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/Ecommerce.DAL.csproj": {
+                "projectPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/Ecommerce.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/Ecommerce.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/Ecommerce.Core.csproj",
+        "projectName": "Ecommerce.Core",
+        "projectPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/Ecommerce.Core.csproj",
+        "packagesPath": "/Users/radityadimas/.nuget/packages/",
+        "outputPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/radityadimas/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/Ecommerce.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/Ecommerce.DAL.csproj",
+        "projectName": "Ecommerce.DAL",
+        "projectPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/Ecommerce.DAL.csproj",
+        "packagesPath": "/Users/radityadimas/.nuget/packages/",
+        "outputPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/radityadimas/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/Ecommerce.Core.csproj": {
+                "projectPath": "/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/Ecommerce.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

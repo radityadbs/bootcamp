@@ -1,0 +1,11 @@
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/bin/Debug/net8.0/Ecommerce.Core.deps.json
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/bin/Debug/net8.0/Ecommerce.Core.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/bin/Debug/net8.0/Ecommerce.Core.pdb
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.AssemblyInfoInputs.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.AssemblyInfo.cs
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.csproj.CoreCompileInputs.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/refint/Ecommerce.Core.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/Ecommerce.Core.pdb
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.Core/obj/Debug/net8.0/ref/Ecommerce.Core.dll

@@ -1,0 +1,17 @@
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.DAL.deps.json
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.DAL.runtimeconfig.json
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.DAL.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.DAL.pdb
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.Core.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/bin/Debug/net8.0/Ecommerce.Core.pdb
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.csproj.AssemblyReference.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.AssemblyInfoInputs.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.AssemblyInfo.cs
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.csproj.CoreCompileInputs.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerc.47BF5B95.Up2Date
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/refint/Ecommerce.DAL.dll
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.pdb
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/Ecommerce.DAL.genruntimeconfig.cache
+/Users/radityadimas/Documents/dotnet/Ecommerce3/Ecommerce.DAL/obj/Debug/net8.0/ref/Ecommerce.DAL.dll

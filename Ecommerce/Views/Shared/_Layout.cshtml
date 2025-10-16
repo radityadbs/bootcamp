@@ -1,0 +1,161 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+@{
+    var tokens = Antiforgery.GetAndStoreTokens(Context);
+    var bodyClass = ViewData["BodyClass"] ?? "";
+}
+<meta name="request-verification-token" content="@tokens.RequestToken" />
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Ecommerce</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Ecommerce.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body class="@bodyClass">
+    @if (bodyClass?.ToString() != "login-page")
+    {
+        <!-- 🌈 Sidebar -->
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <i class="bi bi-bag-check"></i>
+                    <span class="brand-text">Ecommerce</span>
+                </div>
+            </div>
+
+            <ul class="nav flex-column mt-3">
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link">
+                        <i class="bi bi-house-door"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Privacy" class="nav-link">
+                        <i class="bi bi-shield-check"></i>
+                        <span>Privacy</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Product" asp-action="Index" class="nav-link">
+                        <i class="bi bi-box"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer mt-auto text-center">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="user-info mb-2">
+                        <i class="bi bi-person-circle"></i>
+                        <span class="fw-semibold ms-1">@User.Identity.Name</span>
+                    </div>
+
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="px-3 mb-3">
+                        @Html.AntiForgeryToken()
+                        <button type="submit"
+                            class="btn btn-outline-light btn-sm w-100 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-box-arrow-right me-1"></i>
+                            <span>Logout</span>
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login"
+                        class="btn btn-outline-light btn-sm w-100 mb-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-person-circle me-1"></i>
+                        <span>Login</span>
+                    </a>
+                }
+
+            </div>
+        </div>
+
+        <!-- ✅ Tombol Toggle di luar sidebar -->
+        <button class="toggle-btn" id="toggleSidebar">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <!-- ✅ Overlay transparan -->
+        <div class="overlay" id="sidebarOverlay"></div>
+    }
+
+    <!-- 🌟 Main Content -->
+    <div class="main-content">
+        <main role="main" class="pb-3">
+            <form id="antiForgeryForm" asp-antiforgery="true"></form>
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebar = document.getElementById("sidebar");
+            const toggle = document.getElementById("sidebarToggle");
+
+            toggle.addEventListener("click", () => {
+                // Desktop toggle
+                sidebar.classList.toggle("collapsed");
+
+                // Mobile slide toggle
+                if (window.innerWidth < 992) {
+                    sidebar.classList.toggle("active");
+                }
+            });
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebar = document.getElementById("sidebar");
+            const toggleBtn = document.getElementById("toggleSidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+
+            // Klik tombol garis 3
+            toggleBtn.addEventListener("click", () => {
+                const isMobile = window.innerWidth <= 992;
+
+                if (isMobile) {
+                    sidebar.classList.toggle("active");
+                    overlay.classList.toggle("active");
+                } else {
+                    sidebar.classList.toggle("collapsed");
+                }
+
+                // Geser posisi tombol toggle
+                if (sidebar.classList.contains("collapsed") && !isMobile) {
+                    toggleBtn.style.left = "80px";
+                } else if (!isMobile) {
+                    toggleBtn.style.left = "260px";
+                }
+            });
+
+            // Klik overlay untuk menutup sidebar di mobile
+            overlay.addEventListener("click", () => {
+                sidebar.classList.remove("active");
+                overlay.classList.remove("active");
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
